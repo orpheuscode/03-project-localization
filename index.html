@@ -630,4 +630,10 @@
         lastLang = lang;
         const isRTL = RTL_LANGS.has(lang);
         document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
-        bsLink.href 
+        bsLink.href = isRTL ? BS_RTL : BS_LTR;
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  </script>
+</body>
+</html>
