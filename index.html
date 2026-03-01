@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xml:lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,7 +73,8 @@
   </header>
 
   <!-- ========== TIMELINE ========== -->
-  <section class="timeline" id="timeline" aria-label="Intel sustainability timeline">
+  <section class="timeline" id="timeline" aria-labelledby="timeline-heading">
+    <h2 id="timeline-heading" class="visually-hidden">Intel Sustainability Timeline</h2>
 
     <article class="card">
       <div class="card__front">
@@ -519,7 +520,7 @@
           <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" target="_blank" rel="noopener noreferrer" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
           <a href="https://www.intel.com/content/www/us/en/legal/terms-of-use.html" target="_blank" rel="noopener noreferrer" data-en="Terms of Use" data-ar="شروط الاستخدام">Terms of Use</a>
           <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html" target="_blank" rel="noopener noreferrer" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a>
-          <a href="mailto:sustainability@intel.com" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+          <a href="/cdn-cgi/l/email-protection#4231373136232b2c23202b2e2b363b022b2c36272e6c212d2f" data-en="Contact" data-ar="تواصل معنا">Contact</a>
         </nav>
 
         <p class="site-footer__copy"
@@ -533,7 +534,7 @@
   </footer>
 
   <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
   <script>
     // ── Hero carousel ─────────────────────────────────────────
@@ -629,10 +630,4 @@
         lastLang = lang;
         const isRTL = RTL_LANGS.has(lang);
         document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
-        bsLink.href = isRTL ? BS_RTL : BS_LTR;
-      }
-    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-
-  </script>
-</body>
-</html>
+        bsLink.href 
