@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+
+  <!-- Bootstrap RTL CSS (works for both LTR and RTL via JS swap) -->
+  <link id="bs-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ========== LANGUAGE SWITCHER BAR ========== -->
+  <div class="lang-bar" role="navigation" aria-label="Language selection">
+    <div class="lang-bar__inner">
+      <span class="lang-bar__label" data-en="Select Language:" data-ar="اختر اللغة:">Select Language:</span>
+      <div class="lang-bar__btns">
+        <button class="lang-btn lang-btn--active" data-lang="en" aria-pressed="true" aria-label="Switch to English">
+          <i class="bi bi-translate" aria-hidden="true"></i> English
+        </button>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false" aria-label="Switch to Arabic">
+          <i class="bi bi-translate" aria-hidden="true"></i> العربية
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== HERO ========== -->
   <header class="hero">
-
-    <!-- Carousel background slides -->
     <div class="hero__slides">
       <div class="hero__slide" style="background-image: url('img/intel-servers.jpg')"></div>
       <div class="hero__slide" style="background-image: url('img/intel-summit.jpg')"></div>
@@ -20,198 +41,505 @@
     <div class="hero__overlay"></div>
 
     <div class="hero__inner">
-      <img class="hero__logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img class="hero__logo" src="img/intel-header-logo.svg" alt="Intel corporate logo" />
 
       <div class="hero__title-block">
-        <span class="hero__eyebrow">Since 1968</span>
+        <span class="hero__eyebrow" data-en="Since 1968" data-ar="منذ عام 1968">Since 1968</span>
         <h1 class="hero__title">
-          <span class="hero__title-line1">Sustainability</span>
-          <span class="hero__title-line2">Through the Ages</span>
+          <span class="hero__title-line1" data-en="Sustainability" data-ar="الاستدامة">Sustainability</span>
+          <span class="hero__title-line2" data-en="Through the Ages" data-ar="عبر العصور">Through the Ages</span>
         </h1>
         <div class="hero__title-bar"></div>
       </div>
 
-      <p class="hero__subtitle">
-        Explore Intel's journey through time — how our relentless drive for 
-        innovation has forged a more sustainable future for technology 
-        and our planet.
+      <p class="hero__subtitle"
+         data-en="Explore Intel's journey through time — how our relentless drive for innovation has forged a more sustainable future for technology and our planet."
+         data-ar="استكشف رحلة Intel عبر الزمن — كيف أفضى تطلعنا المستمر نحو الابتكار إلى مستقبل أكثر استدامة للتكنولوجيا وكوكبنا.">
+        Explore Intel's journey through time — how our relentless drive for innovation has forged a more sustainable future for technology and our planet.
       </p>
 
       <div class="hero__dots">
-        <button class="hero__dot hero__dot--active" data-slide="0" aria-label="Slide 1"></button>
-        <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
-        <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero__dot hero__dot--active" data-slide="0" aria-label="View slide 1: Data centers"></button>
+        <button class="hero__dot" data-slide="1" aria-label="View slide 2: Sustainability Summit"></button>
+        <button class="hero__dot" data-slide="2" aria-label="View slide 3: Space technology"></button>
       </div>
     </div>
 
-    <a class="hero__scroll-cue" href="#timeline" aria-label="Scroll to timeline">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <a class="hero__scroll-cue" href="#timeline" aria-label="Scroll down to timeline">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </a>
   </header>
 
   <!-- ========== TIMELINE ========== -->
-  <section class="timeline" id="timeline">
+  <section class="timeline" id="timeline" aria-label="Intel sustainability timeline">
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/1.jpg" alt="Intel founding 1968" />
+        <img class="card__img" src="img/1.jpg" alt="Intel headquarters in 1968 when the company was founded" />
         <div class="card__front-text">
           <span class="card__year">1968</span>
-          <h3 class="card__title">Intel Founded</h3>
+          <h3 class="card__title" data-en="Intel Founded" data-ar="تأسيس إنتل">Intel Founded</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">1968</span>
-        <h3 class="card__title">Intel Founded</h3>
-        <p class="card__desc">Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.</p>
+        <h3 class="card__title" data-en="Intel Founded" data-ar="تأسيس إنتل">Intel Founded</h3>
+        <p class="card__desc"
+           data-en="Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation."
+           data-ar="أعاد روبرت نويس وغوردون مور تسمية شركة NM Electronics لتصبح Intel Corporation، مرسيَن بذلك أسس عقود من الابتكار التكنولوجي.">
+          Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/2.jpg" alt="First microprocessor 1971" />
+        <img class="card__img" src="img/2.jpg" alt="Intel 4004 microprocessor chip from 1971" />
         <div class="card__front-text">
           <span class="card__year">1971</span>
-          <h3 class="card__title">First Microprocessor</h3>
+          <h3 class="card__title" data-en="First Microprocessor" data-ar="أول معالج دقيق">First Microprocessor</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">1971</span>
-        <h3 class="card__title">First Microprocessor</h3>
-        <p class="card__desc">Intel debuts the 4004, the world's first commercial microprocessor, igniting the computing revolution and propelling the future of digital devices.</p>
+        <h3 class="card__title" data-en="First Microprocessor" data-ar="أول معالج دقيق">First Microprocessor</h3>
+        <p class="card__desc"
+           data-en="Intel debuts the 4004, the world's first commercial microprocessor, igniting the computing revolution and propelling the future of digital devices."
+           data-ar="أطلقت إنتل المعالج 4004، أول معالج دقيق تجاري في العالم، مشعلةً ثورة الحوسبة ودافعةً مستقبل الأجهزة الرقمية.">
+          Intel debuts the 4004, the world's first commercial microprocessor, igniting the computing revolution and propelling the future of digital devices.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/3.jpg" alt="8086 processor 1978" />
+        <img class="card__img" src="img/3.jpg" alt="Intel 8086 processor chip from 1978" />
         <div class="card__front-text">
           <span class="card__year">1978</span>
-          <h3 class="card__title">8086 Processor</h3>
+          <h3 class="card__title" data-en="8086 Processor" data-ar="معالج 8086">8086 Processor</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">1978</span>
-        <h3 class="card__title">8086 Processor</h3>
-        <p class="card__desc">Launch of the 8086 processor, establishing the x86 architecture that still drives countless PCs and servers in the modern era.</p>
+        <h3 class="card__title" data-en="8086 Processor" data-ar="معالج 8086">8086 Processor</h3>
+        <p class="card__desc"
+           data-en="Launch of the 8086 processor, establishing the x86 architecture that still drives countless PCs and servers in the modern era."
+           data-ar="إطلاق معالج 8086 الذي أرسى بنية x86 التي لا تزال تُشغّل حواسيب وخوادم لا تُعد ولا تُحصى حتى اليوم.">
+          Launch of the 8086 processor, establishing the x86 architecture that still drives countless PCs and servers in the modern era.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/4.jpg" alt="386 processor 1985" />
+        <img class="card__img" src="img/4.jpg" alt="Intel 386 processor with 32-bit architecture from 1985" />
         <div class="card__front-text">
           <span class="card__year">1985</span>
-          <h3 class="card__title">386 Processor</h3>
+          <h3 class="card__title" data-en="386 Processor" data-ar="معالج 386">386 Processor</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">1985</span>
-        <h3 class="card__title">386 Processor</h3>
-        <p class="card__desc">Intel introduces the 386 with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers worldwide.</p>
+        <h3 class="card__title" data-en="386 Processor" data-ar="معالج 386">386 Processor</h3>
+        <p class="card__desc"
+           data-en="Intel introduces the 386 with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers worldwide."
+           data-ar="قدّمت إنتل المعالج 386 بمعمارية 32 بت، فاتحةً عهدًا جديدًا من الأداء وتعدد المهام على الحواسيب الشخصية حول العالم.">
+          Intel introduces the 386 with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers worldwide.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-space.jpg" alt="Iridium satellite 1998" />
+        <img class="card__img" src="img/intel-space.jpg" alt="Iridium satellite in orbit powered by Intel processors in 1998" />
         <div class="card__front-text">
           <span class="card__year">1998</span>
-          <h3 class="card__title">Space-Age Silicon</h3>
+          <h3 class="card__title" data-en="Space-Age Silicon" data-ar="سيليكون عصر الفضاء">Space-Age Silicon</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">1998</span>
-        <h3 class="card__title">Space-Age Silicon</h3>
-        <p class="card__desc">Intel processors power the Iridium satellite constellation, proving its chips can operate reliably in the harshest environment imaginable — low Earth orbit.</p>
+        <h3 class="card__title" data-en="Space-Age Silicon" data-ar="سيليكون عصر الفضاء">Space-Age Silicon</h3>
+        <p class="card__desc"
+           data-en="Intel processors power the Iridium satellite constellation, proving its chips can operate reliably in the harshest environment imaginable — low Earth orbit."
+           data-ar="تُشغّل معالجات إنتل شبكة أقمار إريديوم الصناعية، مثبتةً قدرة شرائحها على العمل بموثوقية في أقسى البيئات — المدار الأرضي المنخفض.">
+          Intel processors power the Iridium satellite constellation, proving its chips can operate reliably in the harshest environment imaginable — low Earth orbit.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-servers.jpg" alt="Peak GHG emissions 2006" />
+        <img class="card__img" src="img/intel-servers.jpg" alt="Intel data center servers representing peak greenhouse gas emissions in 2006" />
         <div class="card__front-text">
           <span class="card__year">2006</span>
-          <h3 class="card__title">Peak GHG Emissions</h3>
+          <h3 class="card__title" data-en="Peak GHG Emissions" data-ar="ذروة انبعاثات الغازات">Peak GHG Emissions</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">2006</span>
-        <h3 class="card__title">Peak GHG Emissions</h3>
-        <p class="card__desc">Intel's highest-ever annual greenhouse gas output triggers massive investment in chemical abatement, renewable energy, and cleaner manufacturing processes.</p>
+        <h3 class="card__title" data-en="Peak GHG Emissions" data-ar="ذروة انبعاثات الغازات">Peak GHG Emissions</h3>
+        <p class="card__desc"
+           data-en="Intel's highest-ever annual greenhouse gas output triggers massive investment in chemical abatement, renewable energy, and cleaner manufacturing processes."
+           data-ar="دفع أعلى مستوى سنوي لانبعاثات الغازات الدفيئة في تاريخ إنتل نحو ضخ استثمارات ضخمة في معالجة الانبعاثات الكيميائية والطاقة المتجددة وعمليات التصنيع الأنظف.">
+          Intel's highest-ever annual greenhouse gas output triggers massive investment in chemical abatement, renewable energy, and cleaner manufacturing processes.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-chipset.jpg" alt="RISE strategy 2020" />
+        <img class="card__img" src="img/intel-chipset.jpg" alt="Intel processor chips representing the RISE sustainability strategy launched in 2020" />
         <div class="card__front-text">
           <span class="card__year">2020</span>
-          <h3 class="card__title">RISE Strategy</h3>
+          <h3 class="card__title" data-en="RISE Strategy" data-ar="استراتيجية RISE">RISE Strategy</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">2020</span>
-        <h3 class="card__title">RISE Strategy</h3>
-        <p class="card__desc">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy — a bold 2030 framework for climate action, water stewardship, and waste reduction.</p>
+        <h3 class="card__title" data-en="RISE Strategy" data-ar="استراتيجية RISE">RISE Strategy</h3>
+        <p class="card__desc"
+           data-en="Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy — a bold 2030 framework for climate action, water stewardship, and waste reduction."
+           data-ar="أطلقت إنتل استراتيجية RISE (المسؤولة والشاملة والمستدامة والممكِّنة) — إطار طموح لعام 2030 يهدف إلى العمل المناخي وإدارة المياه والحد من النفايات.">
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy — a bold 2030 framework for climate action, water stewardship, and waste reduction.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-space2.jpg" alt="Net-zero 2022" />
+        <img class="card__img" src="img/intel-space2.jpg" alt="Satellite orbiting Earth representing Intel's net-zero commitment announced in 2022" />
         <div class="card__front-text">
           <span class="card__year">2022</span>
-          <h3 class="card__title">Net-Zero By 2040</h3>
+          <h3 class="card__title" data-en="Net-Zero By 2040" data-ar="صافي صفري بحلول 2040">Net-Zero By 2040</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">2022</span>
-        <h3 class="card__title">Net-Zero By 2040</h3>
-        <p class="card__desc">Intel commits to net-zero greenhouse gas emissions (Scope 1 & 2) across global operations by 2040, building on a decade of environmental milestones.</p>
+        <h3 class="card__title" data-en="Net-Zero By 2040" data-ar="صافي صفري بحلول 2040">Net-Zero By 2040</h3>
+        <p class="card__desc"
+           data-en="Intel commits to net-zero greenhouse gas emissions (Scope 1 & 2) across global operations by 2040, building on a decade of environmental milestones."
+           data-ar="تلتزم إنتل بتحقيق صافي صفري من انبعاثات الغازات الدفيئة (النطاق 1 و2) عبر عملياتها العالمية بحلول عام 2040، بناءً على عقد من الإنجازات البيئية.">
+          Intel commits to net-zero greenhouse gas emissions (Scope 1 & 2) across global operations by 2040, building on a decade of environmental milestones.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-renewable.jpg" alt="Renewable electricity 2023" />
+        <img class="card__img" src="img/intel-renewable.jpg" alt="Wind turbines at sunset representing Intel achieving 99% renewable electricity in 2023" />
         <div class="card__front-text">
           <span class="card__year">2023</span>
-          <h3 class="card__title">Renewable Electricity</h3>
+          <h3 class="card__title" data-en="Renewable Electricity" data-ar="الكهرباء المتجددة">Renewable Electricity</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">2023</span>
-        <h3 class="card__title">Renewable Electricity</h3>
-        <p class="card__desc">Intel achieves 99% renewable electricity usage worldwide, dramatically cutting carbon emissions and marking a pivotal milestone toward its 2040 net-zero goal.</p>
+        <h3 class="card__title" data-en="Renewable Electricity" data-ar="الكهرباء المتجددة">Renewable Electricity</h3>
+        <p class="card__desc"
+           data-en="Intel achieves 99% renewable electricity usage worldwide, dramatically cutting carbon emissions and marking a pivotal milestone toward its 2040 net-zero goal."
+           data-ar="حققت إنتل استخدام الكهرباء المتجددة بنسبة 99٪ على مستوى العالم، مما أسهم في خفض انبعاثات الكربون بشكل ملحوظ نحو هدف الحياد الكربوني لعام 2040.">
+          Intel achieves 99% renewable electricity usage worldwide, dramatically cutting carbon emissions and marking a pivotal milestone toward its 2040 net-zero goal.
+        </p>
       </div>
     </article>
 
     <article class="card">
       <div class="card__front">
-        <img class="card__img" src="img/intel-summit.jpg" alt="Sustainability Summit 2024" />
+        <img class="card__img" src="img/intel-summit.jpg" alt="Intel Sustainability Summit event in 2024 with industry leaders" />
         <div class="card__front-text">
           <span class="card__year">2024</span>
-          <h3 class="card__title">Sustainability Summit</h3>
+          <h3 class="card__title" data-en="Sustainability Summit" data-ar="قمة الاستدامة">Sustainability Summit</h3>
         </div>
       </div>
       <div class="card__back">
         <span class="card__year">2024</span>
-        <h3 class="card__title">Sustainability Summit</h3>
-        <p class="card__desc">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to shape the future of sustainable semiconductor manufacturing.</p>
+        <h3 class="card__title" data-en="Sustainability Summit" data-ar="قمة الاستدامة">Sustainability Summit</h3>
+        <p class="card__desc"
+           data-en="Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to shape the future of sustainable semiconductor manufacturing."
+           data-ar="استضافت إنتل قمة الاستدامة الأولى من نوعها، جامعةً الموردين والمسؤولين الحكوميين وقادة الصناعة لتشكيل مستقبل تصنيع أشباه الموصلات بشكل مستدام.">
+          Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to shape the future of sustainable semiconductor manufacturing.
+        </p>
       </div>
     </article>
 
   </section>
 
-  <p class="timeline__hint">← Scroll to explore &nbsp;|&nbsp; Hover cards to reveal details →</p>
+  <p class="timeline__hint"
+     data-en="← Scroll to explore &nbsp;|&nbsp; Hover cards to reveal details →"
+     data-ar="← مرر للاستكشاف &nbsp;|&nbsp; حرّك المؤشر فوق البطاقات لعرض التفاصيل →">
+    ← Scroll to explore &nbsp;|&nbsp; Hover cards to reveal details →
+  </p>
+
+  <!-- ========== THREE-COLUMN PILLARS SECTION ========== -->
+  <section class="pillars-section" aria-labelledby="pillars-heading">
+    <div class="container">
+      <h2 class="pillars-section__heading" id="pillars-heading"
+          data-en="Intel's Sustainability Pillars"
+          data-ar="ركائز استدامة إنتل">
+        Intel's Sustainability Pillars
+      </h2>
+      <p class="pillars-section__sub"
+         data-en="Three core commitments driving our path to a net-zero future."
+         data-ar="ثلاثة التزامات جوهرية تقودنا نحو مستقبل محايد كربونياً.">
+        Three core commitments driving our path to a net-zero future.
+      </p>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <h3 class="pillar-card__title" data-en="Climate Action" data-ar="العمل المناخي">Climate Action</h3>
+            <p class="pillar-card__text"
+               data-en="Intel is committed to achieving net-zero greenhouse gas emissions across Scope 1 and 2 by 2040. We invest in renewable energy, chemical abatement, and energy-efficient manufacturing at every facility worldwide."
+               data-ar="تلتزم إنتل بتحقيق انبعاثات صافية صفرية من الغازات الدفيئة ضمن النطاقَين 1 و2 بحلول عام 2040، وتستثمر في الطاقة المتجددة ومعالجة الانبعاثات الكيميائية والتصنيع الموفر للطاقة في جميع منشآتها حول العالم.">
+              Intel is committed to achieving net-zero greenhouse gas emissions across Scope 1 and 2 by 2040. We invest in renewable energy, chemical abatement, and energy-efficient manufacturing at every facility worldwide.
+            </p>
+            <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html"
+               class="pillar-card__link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Learn more about Intel's climate action initiatives (opens in new tab)"
+               data-en="Learn More" data-ar="اعرف المزيد">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h3 class="pillar-card__title" data-en="Water Stewardship" data-ar="إدارة المياه">Water Stewardship</h3>
+            <p class="pillar-card__text"
+               data-en="Intel conserves billions of gallons of water annually through recycling and efficiency programs. We collaborate with local communities to restore watersheds and reduce freshwater consumption across our global operations."
+               data-ar="تحافظ إنتل على مليارات الغالونات من المياه سنوياً عبر برامج إعادة التدوير والكفاءة، وتتعاون مع المجتمعات المحلية لاستعادة مستجمعات المياه وتقليل استهلاك المياه العذبة في عملياتها العالمية.">
+              Intel conserves billions of gallons of water annually through recycling and efficiency programs. We collaborate with local communities to restore watersheds and reduce freshwater consumption across our global operations.
+            </p>
+            <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html"
+               class="pillar-card__link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Learn more about Intel's water stewardship programs (opens in new tab)"
+               data-en="Learn More" data-ar="اعرف المزيد">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <i class="bi bi-recycle"></i>
+            </div>
+            <h3 class="pillar-card__title" data-en="Waste &amp; Circularity" data-ar="النفايات والاقتصاد الدائري">Waste &amp; Circularity</h3>
+            <p class="pillar-card__text"
+               data-en="Intel diverts millions of pounds of waste from landfills each year through recycling, reuse, and circular economy initiatives. We work with suppliers to minimize packaging waste and recover valuable materials from manufacturing."
+               data-ar="تحوّل إنتل ملايين الأرطال من النفايات بعيداً عن مدافن القمامة كل عام من خلال مبادرات إعادة التدوير وإعادة الاستخدام والاقتصاد الدائري.">
+              Intel diverts millions of pounds of waste from landfills each year through recycling, reuse, and circular economy initiatives. We work with suppliers to minimize packaging waste and recover valuable materials from manufacturing.
+            </p>
+            <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html"
+               class="pillar-card__link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Learn more about Intel's waste and circularity efforts (opens in new tab)"
+               data-en="Learn More" data-ar="اعرف المزيد">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ACCORDION ========== -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 class="faq-section__heading" id="faq-heading"
+          data-en="Frequently Asked Questions"
+          data-ar="الأسئلة الشائعة">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="accordion" id="sustainabilityFAQ">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1"
+                    data-en="What is Intel's RISE strategy?"
+                    data-ar="ما هي استراتيجية RISE لإنتل؟">
+              What is Intel's RISE strategy?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#sustainabilityFAQ">
+            <div class="accordion-body"
+                 data-en="RISE stands for Responsible, Inclusive, Sustainable, and Enabling. Launched in 2020, it is Intel's corporate responsibility strategy that sets ambitious 2030 goals across climate action, water stewardship, waste reduction, and inclusive workforce development."
+                 data-ar="تعني RISE: المسؤولة والشاملة والمستدامة والممكِّنة. أُطلقت عام 2020 وهي استراتيجية المسؤولية المؤسسية لإنتل التي تضع أهدافاً طموحة لعام 2030 في مجالات العمل المناخي وإدارة المياه والحد من النفايات وتطوير القوى العاملة الشاملة.">
+              RISE stands for Responsible, Inclusive, Sustainable, and Enabling. Launched in 2020, it is Intel's corporate responsibility strategy that sets ambitious 2030 goals across climate action, water stewardship, waste reduction, and inclusive workforce development.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"
+                    data-en="When will Intel reach net-zero emissions?"
+                    data-ar="متى ستحقق إنتل انبعاثات صافية صفرية؟">
+              When will Intel reach net-zero emissions?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#sustainabilityFAQ">
+            <div class="accordion-body"
+                 data-en="Intel has committed to achieving net-zero greenhouse gas emissions across Scope 1 and Scope 2 by 2040. This builds on the milestone of reaching 99% renewable electricity usage worldwide in 2023."
+                 data-ar="التزمت إنتل بتحقيق انبعاثات صافية صفرية من الغازات الدفيئة في النطاقَين 1 و2 بحلول عام 2040، بناءً على إنجاز الوصول إلى استخدام الكهرباء المتجددة بنسبة 99٪ على مستوى العالم في عام 2023.">
+              Intel has committed to achieving net-zero greenhouse gas emissions across Scope 1 and Scope 2 by 2040. This builds on the milestone of reaching 99% renewable electricity usage worldwide in 2023.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"
+                    data-en="How does Intel conserve water?"
+                    data-ar="كيف تحافظ إنتل على المياه؟">
+              How does Intel conserve water?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#sustainabilityFAQ">
+            <div class="accordion-body"
+                 data-en="Intel conserves billions of gallons of water annually through on-site recycling systems, efficiency improvements in chip manufacturing, and partnerships with local communities to restore watersheds near its facilities."
+                 data-ar="تحافظ إنتل على مليارات الغالونات من المياه سنوياً من خلال أنظمة إعادة التدوير في الموقع وتحسينات الكفاءة في تصنيع الشرائح والشراكات مع المجتمعات المحلية لاستعادة مستجمعات المياه.">
+              Intel conserves billions of gallons of water annually through on-site recycling systems, efficiency improvements in chip manufacturing, and partnerships with local communities to restore watersheds near its facilities.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"
+                    data-en="What happened at Intel's first Sustainability Summit?"
+                    data-ar="ماذا حدث في قمة الاستدامة الأولى لإنتل؟">
+              What happened at Intel's first Sustainability Summit?
+            </button>
+          </h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#sustainabilityFAQ">
+            <div class="accordion-body"
+                 data-en="In 2024, Intel hosted its first Sustainability Summit, bringing together suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing practices and supply chain transparency."
+                 data-ar="في عام 2024، استضافت إنتل قمة الاستدامة الأولى من نوعها، جامعةً الموردين والمسؤولين الحكوميين وقادة الصناعة للتعاون في ممارسات تصنيع أشباه الموصلات المستدامة من الجيل التالي وشفافية سلسلة التوريد.">
+              In 2024, Intel hosted its first Sustainability Summit, bringing together suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing practices and supply chain transparency.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SUBSCRIPTION FORM ========== -->
+  <section class="subscribe-section" aria-labelledby="subscribe-heading">
+    <div class="container">
+      <div class="subscribe-section__inner">
+        <i class="bi bi-envelope-paper subscribe-section__icon" aria-hidden="true"></i>
+        <h2 class="subscribe-section__heading" id="subscribe-heading"
+            data-en="Subscribe to Our Sustainability Newsletter"
+            data-ar="اشترك في نشرتنا الإخبارية للاستدامة">
+          Subscribe to Our Sustainability Newsletter
+        </h2>
+        <p class="subscribe-section__sub"
+           data-en="Stay informed on Intel's latest environmental initiatives, progress reports, and sustainability milestones."
+           data-ar="ابقَ على اطلاع بأحدث مبادرات إنتل البيئية وتقارير التقدم وإنجازات الاستدامة.">
+          Stay informed on Intel's latest environmental initiatives, progress reports, and sustainability milestones.
+        </p>
+
+        <form class="subscribe-form" novalidate aria-label="Newsletter subscription form">
+          <div class="subscribe-form__row">
+
+            <div class="subscribe-form__field">
+              <label for="sub-name" class="subscribe-form__label"
+                     data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+              <input type="text" id="sub-name" name="name" class="subscribe-form__input"
+                     placeholder="Your full name" autocomplete="name"
+                     required aria-required="true" />
+            </div>
+
+            <div class="subscribe-form__field">
+              <label for="sub-email" class="subscribe-form__label"
+                     data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+              <input type="email" id="sub-email" name="email" class="subscribe-form__input"
+                     placeholder="you@example.com" autocomplete="email"
+                     required aria-required="true" />
+            </div>
+
+            <div class="subscribe-form__field subscribe-form__field--btn">
+              <button type="submit" class="subscribe-form__btn">
+                <i class="bi bi-send" aria-hidden="true"></i>
+                <span data-en="Subscribe" data-ar="اشترك">Subscribe</span>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="subscribe-form__consent">
+            <input type="checkbox" id="sub-consent" name="consent" required aria-required="true" />
+            <label for="sub-consent">
+              <span data-en="I agree to receive sustainability updates from Intel. View our" data-ar="أوافق على تلقي تحديثات الاستدامة من إنتل. اطلع على">
+                I agree to receive sustainability updates from Intel. View our
+              </span>
+              <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html"
+                 target="_blank" rel="noopener noreferrer"
+                 data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>.
+            </label>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+
+        <div class="site-footer__brand">
+          <img src="img/intel-header-logo.svg" alt="Intel logo" class="site-footer__logo" />
+          <p class="site-footer__tagline"
+             data-en="Sustainability Through the Ages"
+             data-ar="الاستدامة عبر العصور">Sustainability Through the Ages</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" target="_blank" rel="noopener noreferrer" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+          <a href="https://www.intel.com/content/www/us/en/legal/terms-of-use.html" target="_blank" rel="noopener noreferrer" data-en="Terms of Use" data-ar="شروط الاستخدام">Terms of Use</a>
+          <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html" target="_blank" rel="noopener noreferrer" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a>
+          <a href="mailto:sustainability@intel.com" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+        </nav>
+
+        <p class="site-footer__copy"
+           data-en="© 2025 Intel Corporation. All rights reserved."
+           data-ar="© 2025 شركة إنتل. جميع الحقوق محفوظة.">
+          &copy; 2025 Intel Corporation. All rights reserved.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
   <script>
+    // ── Hero carousel ─────────────────────────────────────────
     const slides = document.querySelectorAll('.hero__slide');
     const dots   = document.querySelectorAll('.hero__dot');
-    let current  = 0, timer;
+    let current  = 0, carouselTimer;
 
     function goTo(n) {
       slides[current].classList.remove('hero__slide--active');
@@ -221,17 +549,90 @@
       dots[current].classList.add('hero__dot--active');
     }
 
-    function autoPlay() { timer = setInterval(() => goTo(current + 1), 5000); }
+    function autoPlay() { carouselTimer = setInterval(() => goTo(current + 1), 5000); }
 
     dots.forEach(d => d.addEventListener('click', () => {
-      clearInterval(timer);
+      clearInterval(carouselTimer);
       goTo(parseInt(d.dataset.slide));
       autoPlay();
     }));
 
     slides[0].classList.add('hero__slide--active');
     autoPlay();
-  </script>
 
+    // ── Language switcher ─────────────────────────────────────
+    const BS_RTL = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+    const BS_LTR = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+    const bsLink = document.getElementById('bs-stylesheet');
+
+    function applyLang(lang) {
+      const isRTL = lang === 'ar';
+      const html  = document.documentElement;
+
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+      bsLink.href = isRTL ? BS_RTL : BS_LTR;
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (!text) return;
+        // For elements that contain child nodes (like links inside labels), only update text nodes
+        if (el.children.length === 0) {
+          el.textContent = text;
+        } else {
+          // For mixed content, update the element's own text via innerHTML carefully
+          el.innerHTML = text;
+        }
+      });
+
+      // Update button aria-pressed states
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle('lang-btn--active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      // Update placeholder text
+      const nameInput  = document.getElementById('sub-name');
+      const emailInput = document.getElementById('sub-email');
+      if (nameInput)  nameInput.placeholder  = isRTL ? 'اسمك الكامل'      : 'Your full name';
+      if (emailInput) emailInput.placeholder = isRTL ? 'you@example.com'   : 'you@example.com';
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+
+    // ── Auto-detect RTL via Google Translate (LevelUp) ────────
+    const RTL_LANGS = new Set(['ar','he','fa','ur','ps','ku','yi','dv','ug','ckb','mzn','prs']);
+    let lastLang = 'en';
+
+    function getTranslateLang() {
+      const m = document.cookie.match(/googtrans=\/\w+\/(\w+)/);
+      return m ? m[1] : document.documentElement.lang || 'en';
+    }
+
+    setInterval(() => {
+      const detected = getTranslateLang();
+      if (detected !== lastLang) {
+        lastLang = detected;
+        const isRTL = RTL_LANGS.has(detected);
+        document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+        bsLink.href = isRTL ? BS_RTL : BS_LTR;
+      }
+    }, 800);
+
+    new MutationObserver(() => {
+      const lang = document.documentElement.lang.split('-')[0];
+      if (lang !== lastLang) {
+        lastLang = lang;
+        const isRTL = RTL_LANGS.has(lang);
+        document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+        bsLink.href = isRTL ? BS_RTL : BS_LTR;
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  </script>
 </body>
 </html>
